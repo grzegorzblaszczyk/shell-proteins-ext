@@ -1,3 +1,4 @@
 # shell-proteins-ext
-Example for external scripts using shell-proteins
+
+Examples for external scripts using [shell-proteins](https://github.com/grzegorzblaszczyk/shell-proteins).
 
