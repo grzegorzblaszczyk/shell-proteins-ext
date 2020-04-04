@@ -13,7 +13,6 @@
 
 function heic2pdf {
   if [ "x${1}" == "x" ] || [ "x${2}" == "x" ] || [ ! -f ${1} ]; then
-    echo "==> ${1} ${2}"
     echo "Please provide a valid input file!"
     echo ""
     exit 1;
@@ -28,7 +27,7 @@ function heic2pdf {
     UNITS="PixelsPerInch"
     RESAMPLE_VALUE="100"
 
-    echo "Converting ${INPUT_FILE} to ${OUTPUT_FILE} using ${TEMP_FILE}.."
+    echo "Converting ${INPUT_FILE} to ${OUTPUT_FILE} using ${TEMP_FILE} ..."
 
     ${CONVERT} "${INPUT_FILE}" -colorspace "${COLORSPACE}" -units "${UNITS}" -resample "${RESAMPLE_VALUE}" "${TEMP_FILE}" && ${CONVERT} "${TEMP_FILE}" "${OUTPUT_FILE}" && ${RM} "${TEMP_FILE}"
   fi
