@@ -12,6 +12,9 @@
 function get_os_version {
   LSB_RELEASE_FILE="/etc/lsb-release"
   if [ -f $LSB_RELEASE_FILE ]; then
+    CAT=`which cat`
+    CUT=`which cut`
+    GREP=`which grep`
     DISTRO_ID=`$CAT /etc/lsb-release | $GREP "ID" | $CUT -f 2 -d "="`;
     echo $DISTRO_ID;
   else
