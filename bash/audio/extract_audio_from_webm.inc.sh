@@ -17,7 +17,7 @@ function extract_audio_from_webm {
     echo ""
     exit 1;
   else
-    CONVERT=`which ffmpeg`
+    FFMPEG=`which ffmpeg`
     RM=`which rm`
     INPUT_FILE="$1"
     OUTPUT_FILE="$2"
