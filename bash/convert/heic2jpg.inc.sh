@@ -11,7 +11,7 @@
 # error:
 #
 
-function jpg2heic {
+function heic2jpg {
   if [ "x${1}" == "x" ] || [ "x${2}" == "x" ] || [ ! -f ${1} ]; then
     echo "Please provide a valid input file!"
     echo ""
