@@ -1,10 +1,10 @@
-# Function: heic2jpg
+# Function: nef2jpg
 #
 # Requirements:
 # * ImageMagick
 #
 # input params:
-#   input HEIC file
+#   input NEF file
 #   output JPG file
 # output:
 #
