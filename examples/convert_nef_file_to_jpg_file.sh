@@ -13,7 +13,7 @@ if [ "x${1}" == "x" ] || [ "x${2}" == "x" ]; then
   exit 1
 fi
 
-verify_if_installed_with_dot "convert" "/usr/local/bin/convert"
+verify_if_installed_with_dot "magick" "/usr/local/bin/magick"
 echo ""
 
 nef2jpg ${1} ${2}

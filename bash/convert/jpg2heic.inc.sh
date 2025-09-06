@@ -1,7 +1,7 @@
 # Function: jpg2heic
 #
 # Requirements:
-# * ImageMagick
+# * ImageMagick 7+
 #
 # input params:
 #   input JPG file
@@ -17,13 +17,13 @@ function jpg2heic {
     echo ""
     exit 1;
   else
-    CONVERT=`which convert`
+    MAGICK=`which magick`
     RM=`which rm`
     INPUT_FILE="$1"
     OUTPUT_FILE="$2"
 
-    echo "Converting ${INPUT_FILE} to ${OUTPUT_FILE} ..."
+    echo "Conevrting ${INPUT_FILE} to ${OUTPUT_FILE} using ImageMagick 7+ ..."
 
-    ${CONVERT} "${INPUT_FILE}" "${OUTPUT_FILE}"
+    ${MAGICK} "${INPUT_FILE}" "${OUTPUT_FILE}"
   fi
 }

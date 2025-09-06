@@ -1,7 +1,7 @@
 # Function: heic2pdf
 #
 # Requirements:
-# * ImageMagick
+# * ImageMagick 7+
 #
 # input params:
 #   input HEIC file
@@ -17,7 +17,7 @@ function heic2pdf {
     echo ""
     exit 1;
   else
-    CONVERT=`which convert`
+    MAGICK=`which magick`
     RM=`which rm`
     INPUT_FILE="$1"
     OUTPUT_FILE="$2"
@@ -27,8 +27,8 @@ function heic2pdf {
     UNITS="PixelsPerInch"
     RESAMPLE_VALUE="100"
 
-    echo "Converting ${INPUT_FILE} to ${OUTPUT_FILE} using ${TEMP_FILE} ..."
+    echo "Converting ${INPUT_FILE} to ${OUTPUT_FILE} using ${TEMP_FILE} with ImageMagick 7+ ...
 
-    ${CONVERT} "${INPUT_FILE}" -colorspace "${COLORSPACE}" -units "${UNITS}" -resample "${RESAMPLE_VALUE}" "${TEMP_FILE}" && ${CONVERT} "${TEMP_FILE}" "${OUTPUT_FILE}" && ${RM} "${TEMP_FILE}"
+    ${MAGICK} "${INPUT_FILE}" -colorspace "${COLORSPACE}" -units "${UNITS}" -resample "${RESAMPLE_VALUE}" "${TEMP_FILE}" && ${CONVERT} "${TEMP_FILE}" "${OUTPUT_FILE}" && ${RM} "${TEMP_FILE}"
   fi
 }
