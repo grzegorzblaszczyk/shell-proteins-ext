@@ -9,7 +9,7 @@ protein_require "grzegorzblaszczyk/shell-proteins-ext/bash/os_agnostic/verify_if
 protein_require "grzegorzblaszczyk/shell-proteins-ext/bash/convert/heic2jpg" "https://raw.githubusercontent.com/grzegorzblaszczyk/shell-proteins-ext/master/bash/convert/heic2jpg.inc.sh"
 
 if [ "x${1}" == "x" ] || [ "x${2}" == "x" ]; then
-  print_usage "JPG input file" "HEIC output file"
+  print_usage "HEIC input file" "JPG output file"
   exit 1
 fi
 
